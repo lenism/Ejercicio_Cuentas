@@ -49,10 +49,11 @@ classDiagram
         
         note "Permite girar más allá del saldo\nhasta el límite de sobregiro"
             class CuentaCorriente
+        end
     }
 ```
-    end
-```
+
+## Descripción
 
 ## Descripción
 
