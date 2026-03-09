@@ -1,7 +1,3 @@
-# Sistema de Cuentas Bancarias
-
-## Diagrama UML
-
 ```mermaid
 classDiagram
     class Cuenta {
@@ -42,9 +38,3 @@ classDiagram
     note right of CuentaAhorros : Requiere saldo mínimo de 10,000 para estar activa
     note right of CuentaCorriente : Permite girar más allá del saldo hasta el límite de sobregiro
 ```
-
-## Descripción
-
-- **Cuenta**: Clase base que define las operaciones bancarias básicas (consignaciones, retiros, cálculo de intereses)
-- **CuentaAhorros**: Hereda de Cuenta con validación de saldo mínimo de 10,000
-- **CuentaCorriente**: Hereda de Cuenta con soporte para sobregiro
