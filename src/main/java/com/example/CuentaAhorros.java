@@ -35,5 +35,21 @@ public class CuentaAhorros extends Cuenta {
             System.out.println("La cuenta no está activa. No se pueden realizar retiros.");
         }
     }
+
+    @Override
+    public void extractomensual() {
+        if (activa) {
+            super.extractomensual();
+        } else {
+            System.out.println("La cuenta no está activa. No se puede generar el extracto mensual.");
+        }
+    }
+
+     public void imprimir(){
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Numero de consignaciones: " + numeroConsignaciones);
+        System.out.println("Numero de retiros: " + retiros);
+        System.out.println("Cuenta activa: " + activa);
+     }
     
 }

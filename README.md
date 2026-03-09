@@ -6,15 +6,16 @@
 classDiagram
     class Cuenta {
         # saldo: float
-        # numeroconsignaciones: int
+        # numeroConsignaciones: int
         # retiros: int
         # tasaanual: float
-        # comisionmensual: float
-        -Cuenta(saldo: float, tasaanual: float)
+        # comisionMensual: float
+        +Cuenta(saldo: float, tasaanual: float)
         +consignar(valor: float) void
         +retirar(valor: float) void
         +calcularinteres() void
         +extractomensual() void
+        +imprimir() void
     }
     
     class CuentaAhorros {
@@ -22,12 +23,16 @@ classDiagram
         +CuentaAhorros(saldo: float, tasaanual: float)
         +consignar(valor: float) void*
         +retirar(valor: float) void*
+        +extractomensual() void*
+        +imprimir() void
     }
     
     class CuentaCorriente {
         - sobregiro: float
         +CuentaCorriente(saldo: float, tasaanual: float, sobregiro: float)
         +retirar(valor: float) void*
+        +extractomensual() void*
+        +imprimir() void
     }
     
     Cuenta <|-- CuentaAhorros

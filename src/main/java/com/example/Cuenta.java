@@ -42,6 +42,12 @@ public class Cuenta {
         System.out.println("Numero de retiros: " + retiros);
      }  
 
+     public void imprimir(){
+        System.out.println("Saldo: " + saldo);
+        System.out.println("Numero de consignaciones: " + numeroConsignaciones);
+        System.out.println("Numero de retiros: " + retiros);
+     }
+
 
 
 
