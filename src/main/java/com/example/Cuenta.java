@@ -4,13 +4,13 @@ public class Cuenta {
     protected float saldo;
     protected int numeroConsignaciones=0;
     protected int retiros=0;
-    protected float tasaanual;
-    protected float comisionMensual;
+    protected float tasaAnual;
+    protected float comisionMensual=0;
 
-    Cuenta (float saldo,  float tasaanual  ){
+    Cuenta (float saldo,  float tasaaAnual  ){
         this.saldo = saldo;
-        this.tasaanual = tasaanual;
-        this.comisionMensual = comisionMensual;
+        this.tasaAnual = tasaAnual;
+      
     }
 
      public void consignar(float valor){
@@ -30,7 +30,7 @@ public class Cuenta {
      }
 
      public void calcularinteres(){
-        float interesmensual = saldo * (tasaanual/100)/12;
+        float interesmensual = saldo * (tasaAnual/100)/12;
         saldo = saldo + interesmensual;
      }  
 
