@@ -4,53 +4,43 @@
 
 ```mermaid
 classDiagram
-    namespace com.example {
-        class Cuenta {
-            # saldo: float
-            # numeroConsignaciones: int
-            # retiros: int
-            # tasaanual: float
-            # comisionMensual: float
-            ~Cuenta(saldo: float, tasaanual: float)
-            +consignar(valor: float) void
-            +retirar(valor: float) void
-            +calcularinteres() void
-            +extractomensual() void
-            +imprimir() void
-        }
-        
-        class CuentaAhorros {
-            - activa: boolean
-            +CuentaAhorros(saldo: float, tasaanual: float)
-            +consignar(valor: float) void
-            +retirar(valor: float) void
-            +extractomensual() void
-            +imprimir() void
-        }
-        
-        class CuentaCorriente {
-            - sobregiro: float
-            +CuentaCorriente(saldo: float, tasaanual: float, sobregiro: float)
-            +retirar(valor: float) void
-            +extractomensual() void
-            +imprimir() void
-        }
-        
-        Cuenta <|-- CuentaAhorros
-        Cuenta <|-- CuentaCorriente
-        
-        note "Clase base para todas las cuentas bancarias"
-            class Cuenta
-        end
-        
-        note "Requiere saldo mínimo de 10,000\npara estar activa"
-            class CuentaAhorros
-        end
-        
-        note "Permite girar más allá del saldo\nhasta el límite de sobregiro"
-            class CuentaCorriente
-        end
+    class Cuenta {
+        #float saldo
+        #int numeroConsignaciones
+        #int retiros
+        #float tasaanual
+        #float comisionMensual
+        ~Cuenta(float saldo, float tasaanual)
+        +consignar(float valor): void
+        +retirar(float valor): void
+        +calcularinteres(): void
+        +extractomensual(): void
+        +imprimir(): void
     }
+    
+    class CuentaAhorros {
+        -boolean activa
+        +CuentaAhorros(float saldo, float tasaanual)
+        +consignar(float valor): void
+        +retirar(float valor): void
+        +extractomensual(): void
+        +imprimir(): void
+    }
+    
+    class CuentaCorriente {
+        -float sobregiro
+        +CuentaCorriente(float saldo, float tasaanual, float sobregiro)
+        +retirar(float valor): void
+        +extractomensual(): void
+        +imprimir(): void
+    }
+    
+    Cuenta <|-- CuentaAhorros
+    Cuenta <|-- CuentaCorriente
+    
+    note right of Cuenta : Clase base para todas las cuentas bancarias
+    note right of CuentaAhorros : Requiere saldo mínimo de 10,000 para estar activa
+    note right of CuentaCorriente : Permite girar más allá del saldo hasta el límite de sobregiro
 ```
 
 ## Descripción
