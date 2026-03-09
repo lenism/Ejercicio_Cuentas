@@ -3,8 +3,8 @@ package com.example;
 public class CuentaAhorros extends Cuenta {
     private boolean activa;
 
-    public CuentaAhorros(float saldo, float tasaanual) {
-        super(saldo, tasaanual);
+    public CuentaAhorros(float saldo, float tasaAnual) {
+        super(saldo, tasaAnual);
         if (saldo < 10000) {
             activa = false;
         } else {

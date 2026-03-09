@@ -37,14 +37,10 @@ classDiagram
     
     Cuenta <|-- CuentaAhorros
     Cuenta <|-- CuentaCorriente
-    
-    note right of Cuenta : Clase base para todas las cuentas
-    note right of CuentaAhorros : Requiere saldo m�nimo de 10,000
-    note right of CuentaCorriente : Permite sobregiro limitado
 ```
 
-## Descripci�n de Clases
+## Descripción
 
-- **Cuenta**: Clase base que define operaciones bancarias b�sicas
-- **CuentaAhorros**: Subclase con validaci�n de saldo m�nimo de 10,000
-- **CuentaCorriente**: Subclase que permite sobregiro hasta un l�mite establecido
+- **Cuenta**: Clase base que define las operaciones bancarias básicas (consignaciones, retiros, cálculo de intereses)
+- **CuentaAhorros**: Hereda de Cuenta con validación de saldo mínimo de 10,000
+- **CuentaCorriente**: Hereda de Cuenta con soporte para sobregiro
