@@ -2,20 +2,20 @@ package com.example;
 
 public class Cuenta {
     protected float saldo;
-    protected int numeroconsignaciones=0;
+    protected int numeroConsignaciones=0;
     protected int retiros=0;
     protected float tasaanual;
-    protected float comisionmensual;
+    protected float comisionMensual;
 
-    Cuenta (float saldo,  float tasaanual ){
+    Cuenta (float saldo,  float tasaanual  ){
         this.saldo = saldo;
         this.tasaanual = tasaanual;
-       
+        this.comisionMensual = comisionMensual;
     }
 
      public void consignar(float valor){
         saldo = saldo + valor;
-        numeroconsignaciones = numeroconsignaciones + 1;
+        numeroConsignaciones = numeroConsignaciones + 1;
      }
 
      public void retirar(float valor){
@@ -36,9 +36,9 @@ public class Cuenta {
 
      public void extractomensual(){
         calcularinteres();
-        saldo = saldo - comisionmensual;
+        saldo = saldo - comisionMensual;
         System.out.println("Saldo: " + saldo);
-        System.out.println("Numero de consignaciones: " + numeroconsignaciones);
+        System.out.println("Numero de consignaciones: " + numeroConsignaciones);
         System.out.println("Numero de retiros: " + retiros);
      }  
 
