@@ -2,7 +2,7 @@
 
 ## Diagrama UML
 
-\\\mermaid
+```mermaid
 classDiagram
     class Cuenta {
         #float saldo
@@ -39,12 +39,12 @@ classDiagram
     Cuenta <|-- CuentaCorriente
     
     note right of Cuenta : Clase base para todas las cuentas
-    note right of CuentaAhorros : Requiere saldo mínimo de 10,000
+    note right of CuentaAhorros : Requiere saldo mï¿½nimo de 10,000
     note right of CuentaCorriente : Permite sobregiro limitado
-\\\
+```
 
-## Descripción de Clases
+## Descripciï¿½n de Clases
 
-- **Cuenta**: Clase base que define operaciones bancarias básicas
-- **CuentaAhorros**: Subclase con validación de saldo mínimo de 10,000
-- **CuentaCorriente**: Subclase que permite sobregiro hasta un límite establecido
+- **Cuenta**: Clase base que define operaciones bancarias bï¿½sicas
+- **CuentaAhorros**: Subclase con validaciï¿½n de saldo mï¿½nimo de 10,000
+- **CuentaCorriente**: Subclase que permite sobregiro hasta un lï¿½mite establecido
