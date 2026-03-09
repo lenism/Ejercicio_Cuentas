@@ -6,6 +6,7 @@ public class Main {
         cuentaAhorros.consignar(5000);
         cuentaAhorros.retirar(2000);
         cuentaAhorros.extractomensual();
+        cuentaAhorros.imprimir();
 
        
     }
