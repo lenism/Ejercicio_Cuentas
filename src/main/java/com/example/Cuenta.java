@@ -19,9 +19,15 @@ public class Cuenta {
      }
 
      public void retirar(float valor){
+      if (valor <= saldo){
         saldo = saldo - valor;
         retiros = retiros + 1;
-     }  
+        
+      }
+      else {
+        System.out.println("No se puede retirar, saldo insuficiente");
+      }
+     }
 
      public void calcularinteres(){
         float interesmensual = saldo * (tasaanual/100)/12;
